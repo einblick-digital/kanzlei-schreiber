@@ -870,16 +870,9 @@ h1, h2, h3, p { margin: 0; }
   .career-apply { grid-template-columns: 1.1fr 0.9fr; align-items: stretch; }
   .career-apply__photo { aspect-ratio: unset; height: 100%; min-height: 420px; }
 }
-.icon-tiles--perks .icon-tile { justify-content: center; min-height: 108px; transition: opacity 620ms var(--ease-standard), transform 420ms var(--ease-standard), box-shadow 320ms var(--ease-standard), border-color 320ms var(--ease-standard), background 320ms var(--ease-standard); }
-.icon-tiles--perks .icon-tile::after { display: none; }
-.icon-tiles--perks .icon-tile:hover { background: var(--surface-accent-tint); border-color: var(--orange-500); }
-.icon-tiles--perks .icon-tile__label {
-  align-self: flex-start;
-  padding-bottom: 3px;
-  background: linear-gradient(var(--orange-500), var(--orange-500)) 0 100% / 0 2px no-repeat;
-  transition: background-size 420ms var(--ease-standard);
-}
-.icon-tiles--perks .icon-tile:hover .icon-tile__label { background-size: 100% 2px; }
+.icon-tiles--perks .icon-tile { justify-content: center; min-height: 108px; }
+.icon-tiles--perks .icon-tile:hover { transform: none; box-shadow: none; }
+.icon-tiles--perks .icon-tile::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 129, 38, 0.22), transparent 64%); }
 
 .apply-card {
   background: var(--surface-canvas);
