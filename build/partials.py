@@ -56,11 +56,11 @@ HEAD = """<!DOCTYPE html>
 <title>__TITLE__</title>
 <meta name="description" content="__DESCRIPTION__">
 __ROBOTS__<link rel="canonical" href="__CANONICAL__">
-<link rel="stylesheet" href="/css/tokens.css?v=46">
-<link rel="stylesheet" href="/css/styles.css?v=46">
+<link rel="stylesheet" href="/css/tokens.css?v=48">
+<link rel="stylesheet" href="/css/styles.css?v=48">
 <script type="application/ld+json">__SCHEMA_JSON__</script>
 <script src="https://unpkg.com/lucide@latest" defer></script>
-<script src="/script.js?v=8" defer></script>
+<script src="/script.js?v=9" defer></script>
 </head>
 <body>
 """
@@ -87,6 +87,7 @@ HEADER = """
     </nav>
     <a href="/kontakt/" class="site-header__cta btn btn--primary btn--sm">Kontakt</a>
   </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 </header>
 
 <main id="top">

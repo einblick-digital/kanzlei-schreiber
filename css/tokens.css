@@ -6,6 +6,7 @@
   --navy-800: #0B3363;
   --navy-700: #164A87;
   --navy-050: #EAF0F6;
+  --sage-700: #4A5546;
   --sage-600: #7C8577;
   --sage-500: #939B8E;
   --sage-400: #AEB5A8;
@@ -28,8 +29,8 @@
 
   /* --- Semantic: text --- */
   --text-primary: var(--navy-900);
-  --text-secondary: var(--sage-600);
-  --text-muted: var(--neutral-500);
+  --text-secondary: var(--sage-700);
+  --text-muted: #5B5E57;
   --text-inverse: var(--neutral-000);
   --text-accent: var(--orange-600);
 
