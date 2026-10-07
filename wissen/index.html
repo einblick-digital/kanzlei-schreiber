@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wissen · Steuerkanzlei Schreiber</title>
+<meta name="description" content="Kurze Erklärvideos zu Steuerfristen, Belegen und Steuerbescheiden von der Steuerkanzlei Schreiber.">
+<link rel="canonical" href="https://www.kanzlei-schreiber.de/wissen/">
+<link rel="stylesheet" href="/css/tokens.css?v=46">
+<link rel="stylesheet" href="/css/styles.css?v=46">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "@id": "https://www.kanzlei-schreiber.de/#braunschweig",
+      "name": "Steuerkanzlei Schreiber · Kanzlei Braunschweig",
+      "url": "https://www.kanzlei-schreiber.de",
+      "telephone": "+49-531-333347",
+      "faxNumber": "+49-531-331095",
+      "email": "steuerkanzlei-bs@t-online.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gaußstraße 32",
+        "postalCode": "38106",
+        "addressLocality": "Braunschweig",
+        "addressCountry": "DE"
+      },
+      "founder": { "@type": "Person", "name": "Frank Michael Schreiber" }
+    },
+    {
+      "@type": "AccountingService",
+      "@id": "https://www.kanzlei-schreiber.de/#magdeburg",
+      "name": "Steuerkanzlei Schreiber · Kanzlei Magdeburg",
+      "url": "https://www.kanzlei-schreiber.de",
+      "telephone": "+49-391-7332640",
+      "faxNumber": "+49-391-7332050",
+      "email": "steuerkanzlei-md@t-online.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Liebknechtstraße 50",
+        "postalCode": "39108",
+        "addressLocality": "Magdeburg",
+        "addressCountry": "DE"
+      },
+      "founder": { "@type": "Person", "name": "Frank Michael Schreiber" }
+    }
+  ]
+}</script>
+<script src="https://unpkg.com/lucide@latest" defer></script>
+<script src="/script.js?v=8" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__bar">
+    <a href="/" class="site-header__logo"><img src="/assets/Steuerkanzlei Schreiber Logo Blau Grau.svg" alt="Steuerkanzlei Schreiber"></a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menü öffnen">
+      <i data-lucide="menu"></i>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <div class="site-nav__item has-dropdown">
+        <a href="/kanzlei/">Kanzlei</a>
+        <div class="site-nav__dropdown">
+          <a href="/kanzlei/geschichte/">Geschichte</a>
+          <a href="/kanzlei/philosophie/">Philosophie</a>
+        </div>
+      </div>
+      <a href="/leistungen/">Leistungen</a>
+      <a href="/wissen/">Wissen</a>
+      <a href="/karriere/" class="is-accent">Karriere</a>
+      <a href="/kanzlei/team/">Team</a>
+    </nav>
+    <a href="/kontakt/" class="site-header__cta btn btn--primary btn--sm">Kontakt</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="page-hero page-hero--split">
+  <div class="page-hero__inner">
+    <div>
+      <nav class="page-hero__crumb"><a href="/">Start</a><span>/</span><span>Wissen</span></nav>
+      <h1>Wissen für Ihren Alltag</h1>
+      <p class="page-hero__lede">Über 80 kurze Erklärvideos zu Fristen, Formularen und Steuerthemen, die immer wiederkehren. Einfach anklicken und ansehen.</p>
+    </div>
+    <div class="photo page-hero__photo">
+      <img src="https://images.unsplash.com/photo-1507831228884-93d43e81a99d?w=900&q=80&auto=format&fit=crop" alt="Bücher und Kalender auf einem Tisch" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section section--page">
+  <div class="container">
+    <div class="wissen-filter">
+      <div class="wissen-filter__search">
+        <i data-lucide="search"></i>
+        <input type="search" id="videoSearch" placeholder="Video suchen, z. B. „Homeoffice“ …" aria-label="Videos durchsuchen">
+      </div>
+      <div class="wissen-filter__pills" role="group" aria-label="Nach Thema filtern">
+        <button type="button" class="filter-pill is-active" data-filter="all">Alle</button>
+        <button type="button" class="filter-pill" data-filter="privat">Privat &amp; Familie</button>
+        <button type="button" class="filter-pill" data-filter="vermietung">Vermietung &amp; Immobilien</button>
+        <button type="button" class="filter-pill" data-filter="unternehmen">Unternehmen &amp; Selbstständige</button>
+        <button type="button" class="filter-pill" data-filter="lohn">Lohn &amp; Gehalt</button>
+      </div>
+    </div>
+    <p class="wissen-filter__empty" id="videoEmpty" hidden>Keine Videos zu dieser Auswahl gefunden.</p>
+    <div class="video-grid stagger" id="videoGrid">
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=kindergeld_und_kinderfreibetrag.mp4" data-title="Kindergeld und Kinderfreibetrag">
+          <img src="https://thumbnail.mainfo.net/kindergeld_und_kinderfreibetrag.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Kindergeld und Kinderfreibetrag</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=verlustverrechnung.mp4" data-title="Verlustverrechnung">
+          <img src="https://thumbnail.mainfo.net/verlustverrechnung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Verlustverrechnung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=betriebsaufspaltung.mp4" data-title="Betriebsaufspaltung">
+          <img src="https://thumbnail.mainfo.net/betriebsaufspaltung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Betriebsaufspaltung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=besonderheiten_bei_pv_anlagen.mp4" data-title="Besonderheiten bei PV-Anlagen auf vermieteten Immobilien">
+          <img src="https://thumbnail.mainfo.net/besonderheiten_bei_pv_anlagen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Besonderheiten bei PV-Anlagen auf vermieteten Immobilien</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=freiberufler_vs_gewerbetreibende.mp4" data-title="Freiberufler vs. Gewerbetreibende">
+          <img src="https://thumbnail.mainfo.net/freiberufler_vs_gewerbetreibende.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Freiberufler vs. Gewerbetreibende</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=nebenkosten_absetzen.mp4" data-title="Nebenkosten absetzen">
+          <img src="https://thumbnail.mainfo.net/nebenkosten_absetzen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Nebenkosten absetzen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=fort_und_weiterbildungskosten.mp4" data-title="Fort- und Weiterbildungskosten">
+          <img src="https://thumbnail.mainfo.net/fort_und_weiterbildungskosten.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Fort- und Weiterbildungskosten</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=umsatzsteuersenkung_in_der_gastronomie.mp4" data-title="Umsatzsteuersenkung in der Gastronomie">
+          <img src="https://thumbnail.mainfo.net/umsatzsteuersenkung_in_der_gastronomie.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Umsatzsteuersenkung in der Gastronomie</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=aktivrente.mp4" data-title="Aktivrente">
+          <img src="https://thumbnail.mainfo.net/aktivrente.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Aktivrente</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=crowdfunding_und_crowdinvesting.mp4" data-title="Crowdfunding und Crowdinvesting">
+          <img src="https://thumbnail.mainfo.net/crowdfunding_und_crowdinvesting.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Crowdfunding und Crowdinvesting</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=airbnb_und_steuern.mp4" data-title="Airbnb und Steuern">
+          <img src="https://thumbnail.mainfo.net/airbnb_und_steuern.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Airbnb und Steuern</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=arbeits_und_schutzkleidung.mp4" data-title="Arbeits- und Schutzkleidung">
+          <img src="https://thumbnail.mainfo.net/arbeits_und_schutzkleidung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Arbeits- und Schutzkleidung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Gewerbesteuer.mp4" data-title="Gewerbesteuer">
+          <img src="https://thumbnail.mainfo.net/Gewerbesteuer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Gewerbesteuer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=energetische_gebaeudesanierung.mp4" data-title="Energetische Gebäudesanierung">
+          <img src="https://thumbnail.mainfo.net/energetische_gebaeudesanierung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Energetische Gebäudesanierung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=unterhalt.mp4" data-title="Unterhalt">
+          <img src="https://thumbnail.mainfo.net/unterhalt.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Unterhalt</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=sonderabschreibung_auf_e-fahrzeuge.mp4" data-title="Sonderabschreibung auf E-Fahrzeuge">
+          <img src="https://thumbnail.mainfo.net/sonderabschreibung_auf_e-fahrzeuge.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Sonderabschreibung auf E-Fahrzeuge</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=investitions-booster.mp4" data-title="Investitions-Booster">
+          <img src="https://thumbnail.mainfo.net/investitions-booster.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Investitions-Booster</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=steuerklassenwechsel.mp4" data-title="Steuerklassenwechsel">
+          <img src="https://thumbnail.mainfo.net/steuerklassenwechsel.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Steuerklassenwechsel</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=kapitalertraege_und_abgeltungssteuer.mp4" data-title="Kapitalerträge und Abgeltungssteuer">
+          <img src="https://thumbnail.mainfo.net/kapitalertraege_und_abgeltungssteuer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Kapitalerträge und Abgeltungssteuer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=elster.mp4" data-title="ELSTER">
+          <img src="https://thumbnail.mainfo.net/elster.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>ELSTER</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=gewinnspiele.mp4" data-title="Gewinnspiele">
+          <img src="https://thumbnail.mainfo.net/gewinnspiele.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Gewinnspiele</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=rueckstellungen_und_ruecklagen_fortsetzung.mp4" data-title="Rückstellungen und Rücklagen (Fortsetzung)">
+          <img src="https://thumbnail.mainfo.net/rueckstellungen_und_ruecklagen_fortsetzung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Rückstellungen und Rücklagen (Fortsetzung)</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=vereine_und_steuern.mp4" data-title="Vereine und Steuern">
+          <img src="https://thumbnail.mainfo.net/vereine_und_steuern.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Vereine und Steuern</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=zweitwohnsitzsteuer.mp4" data-title="Zweitwohnsitzsteuer">
+          <img src="https://thumbnail.mainfo.net/zweitwohnsitzsteuer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Zweitwohnsitzsteuer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=e-rechnungen.mp4" data-title="E-Rechnungen">
+          <img src="https://thumbnail.mainfo.net/e-rechnungen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>E-Rechnungen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Zoll_und_Steuern.mp4" data-title="Zoll und Steuern">
+          <img src="https://thumbnail.mainfo.net/zoll_und_steuern.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Zoll und Steuern</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=krankheitskosten_absetzen.mp4" data-title="Krankheitskosten absetzen">
+          <img src="https://thumbnail.mainfo.net/krankheitskosten_absetzen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Krankheitskosten absetzen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Zuwendungen_an_Arbeitnehmer.mp4" data-title="Zuwendungen an Arbeitnehmer">
+          <img src="https://thumbnail.mainfo.net/Zuwendungen_an_Arbeitnehmer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Zuwendungen an Arbeitnehmer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=versicherungen.mp4" data-title="Versicherungen">
+          <img src="https://thumbnail.mainfo.net/versicherungen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Versicherungen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=vermietung_an_angehoerige.mp4" data-title="Vermietung an Angehörige">
+          <img src="https://thumbnail.mainfo.net/vermietung_an_angehoerige.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Vermietung an Angehörige</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=verkauf_von_immobilien.mp4" data-title="Verkauf von Immobilien">
+          <img src="https://thumbnail.mainfo.net/verkauf_von_immobilien.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Verkauf von Immobilien</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Verfahrensdokumentation.mp4" data-title="Verfahrensdokumentation">
+          <img src="https://thumbnail.mainfo.net/Verfahrensdokumentation.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Verfahrensdokumentation</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=verdeckte_gewinnausschuettung.mp4" data-title="Verdeckte Gewinnausschüttung">
+          <img src="https://thumbnail.mainfo.net/verdeckte_gewinnausschuettung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Verdeckte Gewinnausschüttung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=unternehmensnachfolge.mp4" data-title="Unternehmensnachfolge">
+          <img src="https://thumbnail.mainfo.net/unternehmensnachfolge.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Unternehmensnachfolge</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=umsatzsteuerid.mp4" data-title="Umsatzsteuer-ID">
+          <img src="https://thumbnail.mainfo.net/umsatzsteuerid.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Umsatzsteuer-ID</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=umsatzsteuerfallen.mp4" data-title="Umsatzsteuerfallen">
+          <img src="https://thumbnail.mainfo.net/Umsatzsteuerfallen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Umsatzsteuerfallen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Trinkgelder.mp4" data-title="Trinkgelder">
+          <img src="https://thumbnail.mainfo.net/Trinkgelder.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Trinkgelder</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=spenden.mp4" data-title="Spenden">
+          <img src="https://thumbnail.mainfo.net/spenden.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Spenden</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Scheinselbststaendigkeit.mp4" data-title="Scheinselbstständigkeit">
+          <img src="https://thumbnail.mainfo.net/Scheinselbststaendigkeit.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Scheinselbstständigkeit</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=rueckstellungen_und_ruecklagen.mp4" data-title="Rückstellungen und Rücklagen">
+          <img src="https://thumbnail.mainfo.net/rueckstellungen_und_ruecklagen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Rückstellungen und Rücklagen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Reisekosten.mp4" data-title="Reisekosten">
+          <img src="https://thumbnail.mainfo.net/Reisekosten.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Reisekosten</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Registrierkasse.mp4" data-title="Registrierkasse">
+          <img src="https://thumbnail.mainfo.net/registrierkasse.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Registrierkasse</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Rechnungsangaben.mp4" data-title="Rechnungsangaben">
+          <img src="https://thumbnail.mainfo.net/Rechnungsangaben.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Rechnungsangaben</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=online_und_versandhandel.mp4" data-title="Online- und Versandhandel">
+          <img src="https://thumbnail.mainfo.net/online_und_versandhandel.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Online- und Versandhandel</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=neuregelungen_bei_photovoltaikanlagen.mp4" data-title="Neuregelungen bei Photovoltaikanlagen">
+          <img src="https://thumbnail.mainfo.net/neuregelungen_bei_photovoltaikanlagen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Neuregelungen bei Photovoltaikanlagen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=nachweisgesetz.mp4" data-title="Nachweisgesetz">
+          <img src="https://thumbnail.mainfo.net/nachweisgesetz.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Nachweisgesetz</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Kurzarbeitergeld.mp4" data-title="Kurzarbeitergeld">
+          <img src="https://thumbnail.mainfo.net/Kurzarbeitergeld.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Kurzarbeitergeld</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=mehr_netto_vom_brutto.mp4" data-title="Mehr netto vom brutto">
+          <img src="https://thumbnail.mainfo.net/mehr_netto_vom_brutto.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Mehr netto vom brutto</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=lohnsteuerklassen.mp4" data-title="Lohnsteuerklassen">
+          <img src="https://thumbnail.mainfo.net/lohnsteuerklassen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Lohnsteuerklassen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=lohnsteuerermaessigung.mp4" data-title="Lohnsteuerermäßigung">
+          <img src="https://thumbnail.mainfo.net/lohnsteuerermaessigung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Lohnsteuerermäßigung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=leasing_oder_kauf.mp4" data-title="Leasing oder Kauf">
+          <img src="https://thumbnail.mainfo.net/leasing_oder_kauf.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Leasing oder Kauf</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Kuenstlersozialabgabe.mp4" data-title="Künstlersozialabgabe">
+          <img src="https://thumbnail.mainfo.net/Kuenstlersozialabgabe.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Künstlersozialabgabe</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Kinderbetreuungskosten.mp4" data-title="Kinderbetreuungskosten">
+          <img src="https://thumbnail.mainfo.net/Kinderbetreuungskosten.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Kinderbetreuungskosten</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=kassen_nachschau.mp4" data-title="Kassen-Nachschau">
+          <img src="https://thumbnail.mainfo.net/kassen_nachschau.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Kassen-Nachschau</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=jobticket_und_dienstrad.mp4" data-title="Jobticket und Dienstrad">
+          <img src="https://thumbnail.mainfo.net/jobticket_und_dienstrad.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Jobticket und Dienstrad</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Investitionsabzugsbetrag.mp4" data-title="Investitionsabzugsbetrag">
+          <img src="https://thumbnail.mainfo.net/Investitionsabzugsbetrag.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Investitionsabzugsbetrag</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Homeoffice.mp4" data-title="Homeoffice">
+          <img src="https://thumbnail.mainfo.net/Homeoffice.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Homeoffice</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=haushaltsnahe_dienstleistungen.mp4" data-title="Haushaltsnahe Dienstleistungen">
+          <img src="https://thumbnail.mainfo.net/haushaltsnahe_dienstleistungen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Haushaltsnahe Dienstleistungen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=gutscheine.mp4" data-title="Gutscheine">
+          <img src="https://thumbnail.mainfo.net/gutscheine.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Gutscheine</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=grundsteuer.mp4" data-title="Grundsteuer">
+          <img src="https://thumbnail.mainfo.net/grundsteuer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Grundsteuer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="vermietung">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=grunderwerbsteuer.mp4" data-title="Grunderwerbsteuer">
+          <img src="https://thumbnail.mainfo.net/grunderwerbsteuer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Grunderwerbsteuer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=gmbh_und_gesellschafter.mp4" data-title="GmbH und Gesellschafter">
+          <img src="https://thumbnail.mainfo.net/gmbh_und_gesellschafter.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>GmbH und Gesellschafter</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Geschenke.mp4" data-title="Geschenke">
+          <img src="https://thumbnail.mainfo.net/Geschenke.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Geschenke</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Ferienjobber.mp4" data-title="Ferienjobber">
+          <img src="https://thumbnail.mainfo.net/Ferienjobber.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Ferienjobber</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Fahrtenbuch.mp4" data-title="Fahrtenbuch">
+          <img src="https://thumbnail.mainfo.net/Fahrtenbuch.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Fahrtenbuch</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=euro_oder_bilanz.mp4" data-title="EÜR oder Bilanz">
+          <img src="https://thumbnail.mainfo.net/euro_oder_bilanz.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>EÜR oder Bilanz</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=ersatzleistungen.mp4" data-title="Ersatzleistungen">
+          <img src="https://thumbnail.mainfo.net/ersatzleistungen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Ersatzleistungen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Erbschaft_und_Schenkungsteuer.mp4" data-title="Erbschaft- und Schenkungsteuer">
+          <img src="https://thumbnail.mainfo.net/Erbschaft_und_Schenkungsteuer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Erbschaft- und Schenkungsteuer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Entfernungspauschale.mp4" data-title="Entfernungspauschale">
+          <img src="https://thumbnail.mainfo.net/Entfernungspauschale.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Entfernungspauschale</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=elektronische_buchfuehrung.mp4" data-title="Elektronische Buchführung">
+          <img src="https://thumbnail.mainfo.net/elektronische_buchfuehrung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Elektronische Buchführung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Ehegatten_Arbeitsverhaeltnisse.mp4" data-title="Ehegatten-Arbeitsverhältnisse">
+          <img src="https://thumbnail.mainfo.net/Ehegatten_Arbeitsverhaeltnisse.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Ehegatten-Arbeitsverhältnisse</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Doppelte_Haushaltsfuehrung.mp4" data-title="Doppelte Haushaltsführung">
+          <img src="https://thumbnail.mainfo.net/Doppelte_Haushaltsfuehrung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Doppelte Haushaltsführung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=digitale_rechnungen.mp4" data-title="Digitale Rechnungen">
+          <img src="https://thumbnail.mainfo.net/digitale_rechnungen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Digitale Rechnungen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Bewirtungsaufwendungen.mp4" data-title="Bewirtungsaufwendungen">
+          <img src="https://thumbnail.mainfo.net/Bewirtungsaufwendungen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Bewirtungsaufwendungen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Betriebspruefung.mp4" data-title="Betriebsprüfung">
+          <img src="https://thumbnail.mainfo.net/Betriebspruefung.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Betriebsprüfung</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=betriebsausgaben.mp4" data-title="Betriebsausgaben">
+          <img src="https://thumbnail.mainfo.net/betriebsausgaben.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Betriebsausgaben</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=Betriebliche_Altersvorsorge.mp4" data-title="Betriebliche Altersvorsorge">
+          <img src="https://thumbnail.mainfo.net/Betriebliche_Altersvorsorge.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Betriebliche Altersvorsorge</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=aussergewoehnliche_belastungen.mp4" data-title="Außergewöhnliche Belastungen">
+          <img src="https://thumbnail.mainfo.net/aussergewoehnliche_belastungen.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Außergewöhnliche Belastungen</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="privat">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=ausbildungskosten.mp4" data-title="Ausbildungskosten">
+          <img src="https://thumbnail.mainfo.net/ausbildungskosten.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Ausbildungskosten</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=atypische_stille_gesellschaft.mp4" data-title="Atypische stille Gesellschaft">
+          <img src="https://thumbnail.mainfo.net/atypische_stille_gesellschaft.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Atypische stille Gesellschaft</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="lohn">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=arbeitszimmer.mp4" data-title="Arbeitszimmer">
+          <img src="https://thumbnail.mainfo.net/arbeitszimmer.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Arbeitszimmer</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+      <div data-reveal class="video-card" data-category="unternehmen">
+        <button type="button" class="video-card__thumb" data-embed="https://mainfo.de/107448/nvideo.html?v=abschreibung_von_computern_und_software.mp4" data-title="Abschreibung von Computern und Software">
+          <img src="https://thumbnail.mainfo.net/abschreibung_von_computern_und_software.jpg" alt="" loading="lazy">
+          <span class="video-card__play"><i data-lucide="play"></i></span>
+        </button>
+        <h3>Abschreibung von Computern und Software</h3>
+        <span class="video-card__note">Video ansehen</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Weiterführende Links</h2>
+    <p class="section__lede">Ausgewählte externe Seiten rund um Steuern und Beruf.</p>
+    <ul class="link-list">
+      <li><a href="https://www.datev.de/web/de/startseite/startseite-n/" target="_blank" rel="noopener">DATEV eG</a></li>
+      <li><a href="https://www.steuerberater-verband.de/" target="_blank" rel="noopener">Steuerberaterverband Niedersachsen Sachsen-Anhalt e.V.</a></li>
+      <li><a href="https://www.stbk-niedersachsen.de/index_ger.html" target="_blank" rel="noopener">Steuerberaterkammer Niedersachsen (KdöR)</a></li>
+      <li><a href="https://www.bstbk.de/de/index.html" target="_blank" rel="noopener">Bundessteuerberaterkammer (KdöR)</a></li>
+      <li><a href="https://www.bundesfinanzministerium.de/Web/DE/Home/home.html" target="_blank" rel="noopener">Bundesfinanzministerium</a></li>
+      <li><a href="https://www.steuerzahler.de/Home/1692b637/index.html" target="_blank" rel="noopener">Bund der Steuerzahler Deutschland e.V.</a></li>
+      <li><a href="https://www.steuerzahlerinstitut.de/" target="_blank" rel="noopener">Karl-Bräuer-Institut e.V.</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <div class="site-footer__brand">Steuerkanzlei Schreiber</div>
+      <div style="font:var(--text-body-sm)">Gaußstraße 32, 38106 Braunschweig<br>Liebknechtstraße 50, 39108 Magdeburg</div>
+      <div class="site-footer__social">
+        <a href="https://www.instagram.com/kanzlei.schreiber/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a href="https://www.linkedin.com/company/steuerkanzlei-schreiber/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      </div>
+    </div>
+    <div class="site-footer__col">
+      <a href="/kanzlei/">Kanzlei</a>
+      <a href="/leistungen/">Leistungen</a>
+      <a href="/wissen/">Wissen</a>
+      <a href="/karriere/">Karriere</a>
+      <a href="/kanzlei/team/">Team</a>
+    </div>
+    <div class="site-footer__col">
+      <a href="/kontakt/">Kontakt</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </div>
+    <div class="site-footer__col">
+      <a href="tel:+4953133347">Braunschweig: (05 31) 33 33 47</a>
+      <a href="tel:+493917332640">Magdeburg: (03 91) 7 33 26 40</a>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">© 2026 Steuerkanzlei Schreiber · Mitglied der Steuerberaterkammer Niedersachsen</div>
+</footer>
+
+</body>
+</html>

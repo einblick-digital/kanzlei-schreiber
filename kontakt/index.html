@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt · Steuerkanzlei Schreiber</title>
+<meta name="description" content="Kontaktieren Sie die Steuerkanzlei Schreiber in Braunschweig oder Magdeburg: Adresse, Telefon, E-Mail und Kontaktformular.">
+<link rel="canonical" href="https://www.kanzlei-schreiber.de/kontakt/">
+<link rel="stylesheet" href="/css/tokens.css?v=46">
+<link rel="stylesheet" href="/css/styles.css?v=46">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "@id": "https://www.kanzlei-schreiber.de/#braunschweig",
+      "name": "Steuerkanzlei Schreiber · Kanzlei Braunschweig",
+      "url": "https://www.kanzlei-schreiber.de",
+      "telephone": "+49-531-333347",
+      "faxNumber": "+49-531-331095",
+      "email": "steuerkanzlei-bs@t-online.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gaußstraße 32",
+        "postalCode": "38106",
+        "addressLocality": "Braunschweig",
+        "addressCountry": "DE"
+      },
+      "founder": { "@type": "Person", "name": "Frank Michael Schreiber" }
+    },
+    {
+      "@type": "AccountingService",
+      "@id": "https://www.kanzlei-schreiber.de/#magdeburg",
+      "name": "Steuerkanzlei Schreiber · Kanzlei Magdeburg",
+      "url": "https://www.kanzlei-schreiber.de",
+      "telephone": "+49-391-7332640",
+      "faxNumber": "+49-391-7332050",
+      "email": "steuerkanzlei-md@t-online.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Liebknechtstraße 50",
+        "postalCode": "39108",
+        "addressLocality": "Magdeburg",
+        "addressCountry": "DE"
+      },
+      "founder": { "@type": "Person", "name": "Frank Michael Schreiber" }
+    }
+  ]
+}</script>
+<script src="https://unpkg.com/lucide@latest" defer></script>
+<script src="/script.js?v=8" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__bar">
+    <a href="/" class="site-header__logo"><img src="/assets/Steuerkanzlei Schreiber Logo Blau Grau.svg" alt="Steuerkanzlei Schreiber"></a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menü öffnen">
+      <i data-lucide="menu"></i>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <div class="site-nav__item has-dropdown">
+        <a href="/kanzlei/">Kanzlei</a>
+        <div class="site-nav__dropdown">
+          <a href="/kanzlei/geschichte/">Geschichte</a>
+          <a href="/kanzlei/philosophie/">Philosophie</a>
+        </div>
+      </div>
+      <a href="/leistungen/">Leistungen</a>
+      <a href="/wissen/">Wissen</a>
+      <a href="/karriere/" class="is-accent">Karriere</a>
+      <a href="/kanzlei/team/">Team</a>
+    </nav>
+    <a href="/kontakt/" class="site-header__cta btn btn--primary btn--sm">Kontakt</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <nav class="page-hero__crumb"><a href="/">Start</a><span>/</span><span>Kontakt</span></nav>
+    <h1>Kontakt</h1>
+    <p class="page-hero__lede">Schreiben Sie uns oder rufen Sie direkt an, wir melden uns zeitnah zurück.</p>
+  </div>
+</section>
+
+<section class="section section--page contact">
+  <div class="container contact__grid">
+    <div data-reveal class="photo page-hero__photo">
+      <img src="https://images.unsplash.com/photo-1758876202189-0fbc277dfed9?w=900&q=80&auto=format&fit=crop" alt="Junge Frau telefoniert am Schreibtisch mit Laptop" loading="lazy">
+    </div>
+
+    <div data-reveal class="contact-form-card">
+      <h3>Nachricht senden</h3>
+      <form id="contactForm">
+        <div class="field field--radio">
+          Anrede
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="anrede" value="Herr" required> Herr</label>
+            <label class="radio-option"><input type="radio" name="anrede" value="Frau"> Frau</label>
+            <label class="radio-option"><input type="radio" name="anrede" value="Divers"> Divers</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <label class="field">Name
+            <input type="text" name="name" placeholder="Ihr Name" required>
+          </label>
+          <label class="field">E-Mail
+            <input type="email" name="email" placeholder="name@firma.de" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="field">Telefon (optional)
+            <input type="tel" name="telefon" placeholder="Ihre Telefonnummer">
+          </label>
+          <label class="field">Betreff
+            <input type="text" name="betreff" placeholder="Worum geht es?" required>
+          </label>
+        </div>
+        <label class="field">Nachricht
+          <textarea name="nachricht" rows="4" placeholder="Ihre Nachricht" required></textarea>
+        </label>
+        <div class="field field--hp" aria-hidden="true">
+          <label>Bitte freilassen<input type="text" name="firma_webseite" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <label class="checkbox-field">
+          <input type="checkbox" name="datenschutz" required>
+          <span>Ich habe die <a href="/datenschutz/">Datenschutzerklärung</a> gelesen und erkläre mich mit dieser einverstanden.</span>
+        </label>
+        <button type="submit" class="btn btn--primary btn--md">Nachricht senden</button>
+        <p class="form-success" id="contactSuccess">Vielen Dank. Wir melden uns zeitnah zurück.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div data-reveal class="section-intro">
+      <h2>Unsere Standorte</h2>
+    </div>
+    <div class="contact__locations stagger">
+      <div data-reveal class="location-card">
+        <h3>Kanzlei Braunschweig</h3>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <i data-lucide="map-pin"></i>
+            <div>Steuerkanzlei Schreiber<br><span>Gaußstraße 32, 38106 Braunschweig</span></div>
+          </div>
+          <div class="contact-detail is-inline">
+            <i data-lucide="phone"></i>
+            <a href="tel:+4953133347">(05 31) 33 33 47</a>
+          </div>
+          <div class="contact-detail is-inline">
+            <i data-lucide="printer"></i>
+            <div class="muted">Fax (05 31) 33 10 95</div>
+          </div>
+          <div class="contact-detail is-inline">
+            <i data-lucide="mail"></i>
+            <a href="mailto:steuerkanzlei-bs@t-online.de">steuerkanzlei-bs@t-online.de</a>
+          </div>
+        </div>
+        <div class="directions">
+          <strong>Anfahrt</strong>
+          <a href="https://www.google.com/maps/search/?api=1&query=Gau%C3%9Fstra%C3%9Fe+32+38106+Braunschweig" target="_blank" rel="noopener">Route planen</a>
+        </div>
+      </div>
+
+      <div data-reveal class="location-card">
+        <h3>Kanzlei Magdeburg</h3>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <i data-lucide="map-pin"></i>
+            <div>Steuerkanzlei Schreiber<br><span>Liebknechtstraße 50, 39108 Magdeburg</span></div>
+          </div>
+          <div class="contact-detail is-inline">
+            <i data-lucide="phone"></i>
+            <a href="tel:+493917332640">(03 91) 7 33 26 40</a>
+          </div>
+          <div class="contact-detail is-inline">
+            <i data-lucide="printer"></i>
+            <div class="muted">Fax (03 91) 7 33 20 50</div>
+          </div>
+          <div class="contact-detail is-inline">
+            <i data-lucide="mail"></i>
+            <a href="mailto:steuerkanzlei-md@t-online.de">steuerkanzlei-md@t-online.de</a>
+          </div>
+        </div>
+        <div class="directions">
+          <strong>Anfahrt</strong>
+          <a href="https://www.google.com/maps/search/?api=1&query=Liebknechtstra%C3%9Fe+50+39108+Magdeburg" target="_blank" rel="noopener">Route planen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-banner">
+  <div class="contact-banner__media">
+    <img src="https://images.unsplash.com/photo-1759691555407-3c5834e6991e?w=1800&q=80&auto=format&fit=crop" alt="Heller, einladender Aufenthaltsbereich mit Sitzgelegenheiten" loading="lazy">
+  </div>
+  <div class="container">
+    <div data-reveal class="contact-banner__card">
+      <h2>Wir freuen uns auf Sie</h2>
+      <p>Ob in Braunschweig oder Magdeburg – schauen Sie gern persönlich vorbei.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <div class="site-footer__brand">Steuerkanzlei Schreiber</div>
+      <div style="font:var(--text-body-sm)">Gaußstraße 32, 38106 Braunschweig<br>Liebknechtstraße 50, 39108 Magdeburg</div>
+      <div class="site-footer__social">
+        <a href="https://www.instagram.com/kanzlei.schreiber/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a href="https://www.linkedin.com/company/steuerkanzlei-schreiber/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      </div>
+    </div>
+    <div class="site-footer__col">
+      <a href="/kanzlei/">Kanzlei</a>
+      <a href="/leistungen/">Leistungen</a>
+      <a href="/wissen/">Wissen</a>
+      <a href="/karriere/">Karriere</a>
+      <a href="/kanzlei/team/">Team</a>
+    </div>
+    <div class="site-footer__col">
+      <a href="/kontakt/">Kontakt</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </div>
+    <div class="site-footer__col">
+      <a href="tel:+4953133347">Braunschweig: (05 31) 33 33 47</a>
+      <a href="tel:+493917332640">Magdeburg: (03 91) 7 33 26 40</a>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">© 2026 Steuerkanzlei Schreiber · Mitglied der Steuerberaterkammer Niedersachsen</div>
+</footer>
+
+</body>
+</html>
