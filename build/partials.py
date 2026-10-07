@@ -5,6 +5,9 @@ embedded JSON-LD block contains literal curly braces."""
 
 SITE_URL = "https://www.kanzlei-schreiber.de"
 
+# Vor dem Go-Live auf False setzen und neu bauen
+NOINDEX = True
+
 SCHEMA_JSON = """{
   "@context": "https://schema.org",
   "@graph": [
@@ -52,7 +55,7 @@ HEAD = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>__TITLE__</title>
 <meta name="description" content="__DESCRIPTION__">
-<link rel="canonical" href="__CANONICAL__">
+__ROBOTS__<link rel="canonical" href="__CANONICAL__">
 <link rel="stylesheet" href="/css/tokens.css?v=46">
 <link rel="stylesheet" href="/css/styles.css?v=46">
 <script type="application/ld+json">__SCHEMA_JSON__</script>

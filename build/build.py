@@ -10,7 +10,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-from partials import HEAD, HEADER, FOOTER, SCHEMA_JSON, SITE_URL  # noqa: E402
+from partials import HEAD, HEADER, FOOTER, SCHEMA_JSON, SITE_URL, NOINDEX  # noqa: E402
 from pages import PAGES  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -29,6 +29,7 @@ def build_page(page):
         HEAD.replace("__TITLE__", page["title"])
         .replace("__DESCRIPTION__", page["description"])
         .replace("__CANONICAL__", canonical)
+        .replace("__ROBOTS__", '<meta name="robots" content="noindex, nofollow">\n' if NOINDEX else "")
         .replace("__SCHEMA_JSON__", SCHEMA_JSON.replace("__SITE_URL__", SITE_URL))
     )
 
