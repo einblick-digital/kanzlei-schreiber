@@ -198,39 +198,6 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  function initCounters() {
-    var els = Array.prototype.slice.call(document.querySelectorAll(".stat strong, .hero__stat strong"));
-    if (!els.length) return;
-    if (!("IntersectionObserver" in window)) return;
-    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          io.unobserve(entry.target);
-          var el = entry.target;
-          var match = el.textContent.trim().match(/^(\d+)(.*)$/);
-          if (!match) return;
-          var target = parseInt(match[1], 10);
-          var suffix = match[2];
-          var duration = 900;
-          var start = null;
-          function step(ts) {
-            if (start === null) start = ts;
-            var progress = Math.min((ts - start) / duration, 1);
-            var eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = Math.round(eased * target) + suffix;
-            if (progress < 1) requestAnimationFrame(step);
-            else el.textContent = target + suffix;
-          }
-          requestAnimationFrame(step);
-        });
-      },
-      { threshold: 0.4 }
-    );
-    els.forEach(function (el) { io.observe(el); });
-  }
-
   function initNavToggle() {
     var toggle = document.getElementById("navToggle");
     var nav = document.getElementById("siteNav");
@@ -363,7 +330,6 @@
     initSpotlight();
     initTimeline();
     initWordReveal();
-    initCounters();
     initVideoEmbeds();
     initVideoFilter();
     initNavToggle();

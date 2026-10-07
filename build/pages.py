@@ -5,8 +5,8 @@ anything else becomes `<slug>/index.html`."""
 PAGES = [
     {
         "slug": "",
-        "title": "Steuerkanzlei Schreiber · Steuern, die Sie verstehen",
-        "description": "Steuerkanzlei Schreiber in Braunschweig und Magdeburg berät Privatpersonen und Unternehmen digital, persönlich und verständlich. Jetzt Kontakt aufnehmen oder Teil des Teams werden.",
+        "title": "Steuerkanzlei Schreiber · Braunschweig und Magdeburg",
+        "description": "Steuerkanzlei Schreiber in Braunschweig und Magdeburg: Wir nehmen uns genügend Zeit für Sie. Der Mandant als Persönlichkeit steht im Vordergrund.",
         "content": "home.html",
     },
     {
@@ -17,6 +17,8 @@ PAGES = [
     },
     {
         "slug": "wissen",
+        # TODO: aus Navigation und Sitemap genommen, bis Quelle und Nutzungsrechte (mainfo.de) geklärt sind
+        "sitemap": False,
         "title": "Wissen · Steuerkanzlei Schreiber",
         "description": "Kurze Erklärvideos zu Steuerfristen, Belegen und Steuerbescheiden von der Steuerkanzlei Schreiber.",
         "content": "wissen.html",
@@ -30,7 +32,7 @@ PAGES = [
     {
         "slug": "kanzlei/geschichte",
         "title": "Geschichte · Steuerkanzlei Schreiber",
-        "description": "Von Dr. Alfred Enke (1945) über Dr. Wolfgang Enke bis Frank Michael Schreiber: die Geschichte der Steuerkanzlei Schreiber in drei Generationen.",
+        "description": "Von Dr. Alfred Enke über Dr. Wolfgang Enke bis Frank Michael Schreiber: die Geschichte der Steuerkanzlei Schreiber in drei Generationen.",
         "content": "kanzlei-geschichte.html",
     },
     {
@@ -56,6 +58,12 @@ PAGES = [
         "title": "Kontakt · Steuerkanzlei Schreiber",
         "description": "Kontaktieren Sie die Steuerkanzlei Schreiber in Braunschweig oder Magdeburg: Adresse, Telefon, E-Mail und Kontaktformular.",
         "content": "kontakt.html",
+    },
+    {
+        "slug": "infobriefe",
+        "title": "Infobriefe · Steuerkanzlei Schreiber",
+        "description": "Inhalt der Mandantenschreiben der Steuerkanzlei Schreiber, nach Jahrgang und Monat.",
+        "content": "infobriefe.html",
     },
     {
         "slug": "impressum",

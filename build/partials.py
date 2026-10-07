@@ -56,11 +56,11 @@ HEAD = """<!DOCTYPE html>
 <title>__TITLE__</title>
 <meta name="description" content="__DESCRIPTION__">
 __ROBOTS__<link rel="canonical" href="__CANONICAL__">
-<link rel="stylesheet" href="/css/tokens.css?v=61">
-<link rel="stylesheet" href="/css/styles.css?v=61">
+<link rel="stylesheet" href="/css/tokens.css?v=63">
+<link rel="stylesheet" href="/css/styles.css?v=63">
 <script type="application/ld+json">__SCHEMA_JSON__</script>
 <script src="https://unpkg.com/lucide@latest" defer></script>
-<script src="/script.js?v=13" defer></script>
+<script src="/script.js?v=14" defer></script>
 </head>
 <body>
 """
@@ -81,7 +81,6 @@ HEADER = """
         </div>
       </div>
       <a href="/leistungen/">Leistungen</a>
-      <a href="/wissen/">Wissen</a>
       <a href="/karriere/" class="is-accent">Karriere</a>
       <a href="/kanzlei/team/">Team</a>
     </nav>
@@ -109,13 +108,13 @@ FOOTER = """
     <div class="site-footer__col">
       <a href="/kanzlei/">Kanzlei</a>
       <a href="/leistungen/">Leistungen</a>
-      <a href="/wissen/">Wissen</a>
       <a href="/karriere/">Karriere</a>
       <a href="/kanzlei/team/">Team</a>
     </div>
     <div class="site-footer__col">
       <a href="/kontakt/">Kontakt</a>
       <a href="/faq/">FAQ</a>
+      <a href="/infobriefe/">Infobriefe</a>
       <a href="/impressum/">Impressum</a>
       <a href="/datenschutz/">Datenschutz</a>
     </div>

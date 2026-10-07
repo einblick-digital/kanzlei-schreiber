@@ -46,6 +46,8 @@ def build_page(page):
 def build_sitemap():
     urls = []
     for page in PAGES:
+        if page.get("sitemap") is False:
+            continue
         slug = page["slug"].strip("/")
         urls.append(f"{SITE_URL}/{slug}/" if slug else f"{SITE_URL}/")
 
