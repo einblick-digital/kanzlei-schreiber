@@ -1081,17 +1081,25 @@ h1, h2, h3, p { margin: 0; }
 .site-footer__bottom { padding-top: 24px; font: var(--text-caption); }
 
 /* ---------- Geschichte timeline ---------- */
-.timeline { position: relative; display: flex; flex-direction: column; gap: 44px; max-width: 760px; }
-.timeline::before {
+.timeline { position: relative; display: flex; flex-direction: column; gap: clamp(56px, 7vw, 88px); }
+.timeline::before,
+.timeline::after {
   content: "";
   position: absolute;
   left: 7px;
   top: 8px;
   bottom: 8px;
-  width: 1px;
-  background: var(--border-default);
+  width: 3px;
+  margin-left: -1px;
+  border-radius: 2px;
 }
-.timeline-item { position: relative; padding-left: 36px; }
+.timeline::before { background: var(--border-default); }
+.timeline::after {
+  background: linear-gradient(var(--orange-400), var(--orange-500));
+  transform: scaleY(var(--tl, 0));
+  transform-origin: top;
+}
+.timeline-item { position: relative; padding-left: 44px; }
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -1101,8 +1109,11 @@ h1, h2, h3, p { margin: 0; }
   height: 15px;
   border-radius: var(--radius-circle);
   background: var(--surface-canvas);
-  border: 2px solid var(--orange-500);
+  border: 2px solid var(--border-default);
+  z-index: 1;
+  transition: background 360ms var(--ease-standard), border-color 360ms var(--ease-standard), box-shadow 360ms var(--ease-standard);
 }
+.timeline-item.is-passed::before { background: var(--orange-500); border-color: var(--orange-500); box-shadow: 0 0 0 6px rgba(255, 129, 38, 0.2); }
 .timeline-item__year {
   display: block;
   font: var(--text-label);
@@ -1111,8 +1122,18 @@ h1, h2, h3, p { margin: 0; }
   color: var(--text-accent);
   margin-bottom: 6px;
 }
-.timeline-item h3 { font: var(--text-h3); color: var(--navy-900); margin: 0 0 8px; }
-.timeline-item p { font: var(--text-body); color: var(--text-secondary); margin: 0; max-width: 62ch; text-wrap: pretty; }
+.timeline-item h3 { font: 600 2rem/1.2 var(--font-display); color: var(--navy-900); margin: 0 0 20px; }
+.timeline-item__body { display: grid; gap: 18px; }
+.timeline-item p { font: 400 1.0625rem/1.75 var(--font-sans); color: var(--text-secondary); margin: 0; max-width: 78ch; text-wrap: pretty; }
+@media (min-width: 960px) {
+  .timeline-item { display: grid; grid-template-columns: minmax(240px, 300px) 1fr; column-gap: clamp(40px, 6vw, 88px); padding-left: 56px; align-items: start; }
+  .timeline-item__head { position: sticky; top: 140px; }
+  .timeline-item p { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline::after { transform: scaleY(1); }
+  .timeline-item::before { background: var(--orange-500); border-color: var(--orange-500); }
+}
 
 /* ---------- Profile block (Kooperationen bios etc.) ---------- */
 .profile + .profile { margin-top: 44px; }

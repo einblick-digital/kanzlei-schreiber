@@ -109,6 +109,29 @@
     });
   }
 
+
+  function initTimeline() {
+    var tl = document.querySelector(".timeline");
+    if (!tl) return;
+    var items = Array.prototype.slice.call(tl.querySelectorAll(".timeline-item"));
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var r = tl.getBoundingClientRect();
+      var mark = window.innerHeight * 0.55;
+      var p = Math.max(0, Math.min(1, (mark - r.top) / r.height));
+      tl.style.setProperty("--tl", p.toFixed(4));
+      items.forEach(function (it) {
+        var top = it.getBoundingClientRect().top;
+        it.classList.toggle("is-passed", top < mark);
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+  }
+
   function initVideoEmbeds() {
     var thumbs = Array.prototype.slice.call(document.querySelectorAll(".video-card__thumb[data-embed]"));
     thumbs.forEach(function (thumb) {
@@ -337,6 +360,7 @@
     initScrollProgress();
     initParallax();
     initSpotlight();
+    initTimeline();
     initWordReveal();
     initCounters();
     initVideoEmbeds();

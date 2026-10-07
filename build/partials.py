@@ -56,11 +56,11 @@ HEAD = """<!DOCTYPE html>
 <title>__TITLE__</title>
 <meta name="description" content="__DESCRIPTION__">
 __ROBOTS__<link rel="canonical" href="__CANONICAL__">
-<link rel="stylesheet" href="/css/tokens.css?v=48">
-<link rel="stylesheet" href="/css/styles.css?v=48">
+<link rel="stylesheet" href="/css/tokens.css?v=49">
+<link rel="stylesheet" href="/css/styles.css?v=49">
 <script type="application/ld+json">__SCHEMA_JSON__</script>
 <script src="https://unpkg.com/lucide@latest" defer></script>
-<script src="/script.js?v=9" defer></script>
+<script src="/script.js?v=10" defer></script>
 </head>
 <body>
 """
