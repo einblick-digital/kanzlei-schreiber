@@ -102,9 +102,9 @@
   --text-subtitle: 700 1.125rem/1.4 var(--font-sans);
   --text-body-lg: 400 1.125rem/1.6 var(--font-sans);
   --text-body: 400 1rem/1.6 var(--font-sans);
-  --text-body-sm: 400 0.875rem/1.55 var(--font-sans);
+  --text-body-sm: 400 1rem/1.6 var(--font-sans);
   --text-label: 600 0.8125rem/1.3 var(--font-sans);
-  --text-caption: 400 0.75rem/1.4 var(--font-sans);
+  --text-caption: 400 0.875rem/1.5 var(--font-sans);
 
   --tracking-label: 0.06em;
   --tracking-display: 0.005em;
