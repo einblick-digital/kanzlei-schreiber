@@ -1470,11 +1470,10 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* Quote on photo (Philosophie) */
-.contact-banner--quote { min-height: clamp(480px, 50vw, 600px); }
+.contact-banner--quote { min-height: clamp(440px, 40vw, 520px); }
 .contact-banner--quote .contact-banner__media::after { background: rgba(3, 35, 74, 0.06); }
-.contact-banner--quote .contact-banner__media img { object-position: 50% 40%; --ps: 1.45; }
-.contact-banner--quote .container { display: flex; justify-content: flex-end; }
+.contact-banner--quote .contact-banner__media img { object-position: 50% 50%; --ps: 1.25; }
+.contact-banner--quote .container { display: flex; justify-content: center; }
 .contact-banner--quote .contact-banner__card { max-width: 600px; text-align: center; }
-@media (max-width: 640px) { .contact-banner--quote .container { justify-content: center; } }
 .contact-banner--quote .contact-banner__card > p { font: 500 clamp(1.5rem, 2.6vw, 1.875rem)/1.4 var(--font-display); color: var(--navy-900); margin: 0 0 18px; }
 .contact-banner--quote .contact-banner__card > span { font: var(--text-caption); color: var(--text-secondary); letter-spacing: var(--tracking-label); text-transform: uppercase; }
