@@ -7,8 +7,8 @@
 <meta name="description" content="Offene Stellen und Initiativbewerbung bei der Steuerkanzlei Schreiber in Braunschweig und Magdeburg.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://www.kanzlei-schreiber.de/karriere/">
-<link rel="stylesheet" href="/css/tokens.css?v=64">
-<link rel="stylesheet" href="/css/styles.css?v=64">
+<link rel="stylesheet" href="/css/tokens.css?v=66">
+<link rel="stylesheet" href="/css/styles.css?v=66">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -83,7 +83,7 @@
       <a href="/" style="color:var(--sage-400)">Start</a><span>/</span><span>Karriere</span>
     </nav>
 
-    <div data-reveal class="career__intro" style="margin-bottom:0">
+    <div data-reveal class="career__intro career__intro--photo" style="margin-bottom:0">
       <div>
         <div class="eyebrow">
           <span class="eyebrow__line"></span>
@@ -92,10 +92,13 @@
         <!-- TODO: Hero-Text "Wir suchen DICH! / Steuern sind trocken? ..." ist auf der alten Seite nicht belegt. Quelle klären. -->
         <h1 style="font:var(--text-h1); color:var(--neutral-000); margin:0 0 16px">Wir suchen <span style="color:var(--orange-400)">DICH!</span></h1>
         <p style="font:var(--text-body-lg); color:var(--sage-200); max-width:56ch; margin:0">Steuern sind trocken? Unser Team nicht. Wir zeigen dir, wie wir jeden Tag gemeinsam Lösungen finden, lachen und die Steuerwelt ein Stück moderner machen.</p>
+        <div class="career__intro-actions">
+          <a href="#stellen" class="btn btn--accent btn--lg">Offene Stellen</a>
+          <a href="#initiativ" class="btn btn--outline-inverse">Initiativbewerbung</a>
+        </div>
       </div>
-      <div class="career__intro-actions">
-        <a href="#stellen" class="btn btn--accent btn--lg">Offene Stellen</a>
-        <a href="#initiativ" class="btn btn--outline-inverse">Initiativbewerbung</a>
+      <div class="photo career__hero-photo">
+        <img src="https://images.unsplash.com/photo-1748261500463-d15e624baf8f?w=1100&q=80&auto=format&fit=crop" alt="Kollegen in der Teamküche während der Mittagspause" loading="eager">
       </div>
     </div>
   </div>
@@ -138,7 +141,7 @@
     <div data-reveal class="section-intro">
       <h2>Wir bieten Ihnen</h2>
     </div>
-    <div class="icon-tiles stagger">
+    <div class="icon-tiles icon-tiles--perks stagger">
       <div data-reveal class="icon-tile"><span class="icon-tile__label">Kollegiales Arbeitsumfeld</span></div>
       <div data-reveal class="icon-tile"><span class="icon-tile__label">Faires Gehalt</span></div>
       <div data-reveal class="icon-tile"><span class="icon-tile__label">Fort- und Weiterbildung</span></div>
@@ -151,26 +154,7 @@
 </section>
 
 <section class="section section--page">
-  <div class="container career-narrow">
-    <div data-reveal class="career__gallery-2">
-      <div class="photo">
-        <img src="https://images.unsplash.com/photo-1748261500463-d15e624baf8f?w=700&q=80&auto=format&fit=crop" alt="Kollegen in der Teamküche während der Mittagspause" loading="lazy">
-      </div>
-      <div class="photo">
-        <img src="https://images.unsplash.com/photo-1738566061961-4e20e3bf470d?w=700&q=80&auto=format&fit=crop" alt="Arbeit an einer Finanzauswertung am Schreibtisch" loading="lazy">
-      </div>
-      <div class="photo">
-        <img src="https://images.unsplash.com/photo-1632923945657-ccd98efe59e3?w=700&q=80&auto=format&fit=crop" alt="Kollegin arbeitet konzentriert am Stehtisch" loading="lazy">
-      </div>
-      <div class="photo">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80&auto=format&fit=crop" alt="Drei Kolleginnen und Kollegen lachen gemeinsam am Tisch" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container career-narrow">
+  <div class="container career-apply">
     <div id="initiativ" data-reveal class="apply-card">
       <h3>Online-Bewerbung</h3>
       <p>Das Formular hat drei Schritte: Kontakt, Werdegang und Verfügbarkeit.</p>
@@ -263,6 +247,9 @@
         <!-- TODO: Das Formular ist noch nicht an einen Versand (E-Mail/Backend) angebunden. Vor dem Go-Live klären. -->
         <p class="form-success" id="applicationSuccess">Vielen Dank für Ihre Bewerbung.</p>
       </form>
+    </div>
+    <div class="photo career-apply__photo">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop" alt="Drei Kolleginnen und Kollegen lachen gemeinsam am Tisch" loading="lazy">
     </div>
   </div>
 </section>
