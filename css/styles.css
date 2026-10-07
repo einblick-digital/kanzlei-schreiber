@@ -1502,3 +1502,6 @@ h1, h2, h3, p { margin: 0; }
 .infobriefe h4 { margin: 20px 0 6px; }
 
 .hero h1 { text-wrap: balance; }
+
+/* Karriere: mehr Luft zwischen Eyebrow und Überschrift */
+.career .eyebrow { margin-bottom: 22px; }
