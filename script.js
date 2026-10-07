@@ -51,7 +51,7 @@
         var r = img.parentElement.getBoundingClientRect();
         if (r.bottom < 0 || r.top > vh) return;
         var p = (r.top + r.height / 2 - vh / 2) / vh;
-        img.style.setProperty("--py", (p * -70).toFixed(1) + "px");
+        img.style.setProperty("--py", (p * -(parseFloat(img.getAttribute("data-parallax")) || 70)).toFixed(1) + "px");
       });
     }
     function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }

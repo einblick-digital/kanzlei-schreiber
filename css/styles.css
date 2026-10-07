@@ -1435,7 +1435,7 @@ h1, h2, h3, p { margin: 0; }
 /* Photos wipe in, banner photos drift (parallax) */
 .photo[data-reveal] img { clip-path: inset(0 0 100% 0); transition: clip-path 1000ms cubic-bezier(0.65, 0, 0.35, 1) 120ms, transform 600ms var(--ease-standard); }
 .photo[data-reveal].is-visible img { clip-path: inset(0 0 0 0); }
-.contact-banner__media img { transform: translate3d(0, var(--py, 0px), 0) scale(1.2); will-change: transform; }
+.contact-banner__media img { transform: translate3d(0, var(--py, 0px), 0) scale(var(--ps, 1.2)); will-change: transform; }
 
 /* Section headings get a growing accent bar */
 .section-intro h2::after {
@@ -1472,7 +1472,7 @@ h1, h2, h3, p { margin: 0; }
 /* Quote on photo (Philosophie) */
 .contact-banner--quote { min-height: clamp(480px, 50vw, 600px); }
 .contact-banner--quote .contact-banner__media::after { background: rgba(3, 35, 74, 0.06); }
-.contact-banner--quote .contact-banner__media img { object-position: 50% 40%; }
+.contact-banner--quote .contact-banner__media img { object-position: 50% 40%; --ps: 1.45; }
 .contact-banner--quote .container { display: flex; justify-content: flex-end; }
 .contact-banner--quote .contact-banner__card { max-width: 600px; text-align: center; }
 @media (max-width: 640px) { .contact-banner--quote .container { justify-content: center; } }
