@@ -56,8 +56,8 @@ HEAD = """<!DOCTYPE html>
 <title>__TITLE__</title>
 <meta name="description" content="__DESCRIPTION__">
 __ROBOTS__<link rel="canonical" href="__CANONICAL__">
-<link rel="stylesheet" href="/css/tokens.css?v=56">
-<link rel="stylesheet" href="/css/styles.css?v=56">
+<link rel="stylesheet" href="/css/tokens.css?v=57">
+<link rel="stylesheet" href="/css/styles.css?v=57">
 <script type="application/ld+json">__SCHEMA_JSON__</script>
 <script src="https://unpkg.com/lucide@latest" defer></script>
 <script src="/script.js?v=12" defer></script>
