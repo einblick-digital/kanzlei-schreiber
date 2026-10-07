@@ -1225,7 +1225,7 @@ h1, h2, h3, p { margin: 0; }
   padding: clamp(24px, 3vw, 32px);
   transition: opacity 620ms var(--ease-standard), transform 420ms var(--ease-standard), box-shadow 320ms var(--ease-standard), border-color 320ms var(--ease-standard);
 }
-.leistung-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--navy-900); }
+.leistung-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .leistung-card__num {
   display: block;
   font: 700 3.25rem/1 var(--font-display);
@@ -1247,29 +1247,14 @@ h1, h2, h3, p { margin: 0; }
   flex: 0 0 auto;
   margin-top: 8px;
 }
-.leistung-card:hover h3 { color: var(--neutral-000); }
-.leistung-card:hover li { color: var(--sage-200); }
 
-/* Shared hover layer for cards/tiles: navy fill sweeps up, mouse spotlight follows the cursor */
-.leistung-card::before,
-.icon-tile::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--navy-900);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 560ms cubic-bezier(.65, 0, .35, 1);
-  z-index: -2;
-}
-.leistung-card:hover::before,
-.icon-tile:hover::before { transform: scaleY(1); }
+/* Shared hover layer for cards/tiles: soft spotlight follows the cursor */
 .leistung-card::after,
 .icon-tile::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 129, 38, 0.22), transparent 62%);
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 129, 38, 0.13), transparent 62%);
   opacity: 0;
   transition: opacity 320ms var(--ease-standard);
   pointer-events: none;
@@ -1279,7 +1264,6 @@ h1, h2, h3, p { margin: 0; }
 .icon-tile:hover::after { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .leistung-card:hover, .icon-tile:hover { transform: none; }
-  .leistung-card::before, .icon-tile::before { transition: none; }
 }
 
 /* ---------- Plain divided list (Kooperationen categories) ---------- */
@@ -1318,7 +1302,7 @@ h1, h2, h3, p { margin: 0; }
   border-radius: var(--radius-lg);
   transition: opacity 620ms var(--ease-standard), transform 420ms var(--ease-standard), box-shadow 320ms var(--ease-standard), border-color 320ms var(--ease-standard);
 }
-.icon-tile:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--navy-900); }
+.icon-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .icon-tile__num {
   font: 700 2.5rem/1 var(--font-display);
   color: transparent;
@@ -1328,7 +1312,6 @@ h1, h2, h3, p { margin: 0; }
 }
 .icon-tile:hover .icon-tile__num { color: var(--orange-500); transform: translateX(6px); }
 .icon-tile span.icon-tile__label { font: var(--text-subtitle); color: var(--navy-900); transition: color 300ms var(--ease-standard) 230ms; }
-.icon-tile:hover span.icon-tile__label { color: var(--neutral-000); }
 
 /* ---------- Prose (legal / stub pages) ---------- */
 .prose { max-width: 720px; }
@@ -1449,8 +1432,8 @@ h1, h2, h3, p { margin: 0; }
 .btn:active { transform: translateY(0) scale(0.98); }
 
 /* Photos wipe in, banner photos drift (parallax) */
-.photo[data-reveal] { clip-path: inset(0 0 100% 0 round 14px); transition: opacity 620ms var(--ease-standard), transform 620ms var(--ease-standard), clip-path 1000ms cubic-bezier(0.65, 0, 0.35, 1); }
-.photo[data-reveal].is-visible { clip-path: inset(0 0 0 0 round 14px); }
+.photo[data-reveal] img { clip-path: inset(0 0 100% 0); transition: clip-path 1000ms cubic-bezier(0.65, 0, 0.35, 1) 120ms, transform 600ms var(--ease-standard); }
+.photo[data-reveal].is-visible img { clip-path: inset(0 0 0 0); }
 .contact-banner__media img { transform: translate3d(0, var(--py, 0px), 0) scale(1.2); will-change: transform; }
 
 /* Section headings get a growing accent bar */
@@ -1477,7 +1460,7 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .js-words .w__i { transform: none; animation: none !important; }
   .hero__stat { animation: none; }
-  .photo[data-reveal] { clip-path: none; }
+  .photo[data-reveal] img { clip-path: none; }
   .contact-banner__media img { transform: scale(1.05); }
   .section-intro h2::after { transition: none; width: 56px; }
   .scroll-progress { display: none; }
@@ -1485,5 +1468,5 @@ h1, h2, h3, p { margin: 0; }
 @media print {
   .scroll-progress { display: none; }
   .js-words .w__i { transform: none !important; animation: none !important; }
-  .photo[data-reveal] { clip-path: none !important; }
+  .photo[data-reveal] img { clip-path: none !important; }
 }
