@@ -999,6 +999,9 @@ h1, h2, h3, p { margin: 0; }
   margin-bottom: 48px;
 }
 .location-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   background: var(--surface-canvas);
@@ -1006,7 +1009,6 @@ h1, h2, h3, p { margin: 0; }
   transition: transform var(--duration-base) var(--ease-standard), box-shadow var(--duration-base) var(--ease-standard), border-color var(--duration-base) var(--ease-standard);
 }
 .location-card:hover {
-  transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: var(--border-default);
 }
@@ -1247,7 +1249,8 @@ h1, h2, h3, p { margin: 0; }
 
 /* Shared hover layer for cards/tiles: soft spotlight follows the cursor */
 .leistung-card::after,
-.icon-tile::after {
+.icon-tile::after,
+.location-card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1258,7 +1261,8 @@ h1, h2, h3, p { margin: 0; }
   z-index: -1;
 }
 .leistung-card:hover::after,
-.icon-tile:hover::after { opacity: 1; }
+.icon-tile:hover::after,
+.location-card:hover::after { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .leistung-card:hover, .icon-tile:hover { transform: none; }
 }
@@ -1449,9 +1453,6 @@ h1, h2, h3, p { margin: 0; }
 /* Gentle float + lift details */
 .hero__stat { animation: floaty 6s ease-in-out infinite; }
 @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-.team-member__photo { transition: transform 420ms var(--ease-standard), box-shadow 420ms var(--ease-standard); }
-.team-member:hover .team-member__photo { transform: translateY(-8px) rotate(-1deg); box-shadow: var(--shadow-lg); }
-.location-card { position: relative; }
 
 [data-reveal].reveal-done { transition-delay: 0ms !important; }
 @media (prefers-reduced-motion: reduce) {
@@ -1466,27 +1467,6 @@ h1, h2, h3, p { margin: 0; }
   .scroll-progress { display: none; }
   .js-words .w__i { transform: none !important; animation: none !important; }
   .photo[data-reveal] img { clip-path: none !important; }
-}
-
-/* ---------- Cursor glow (orange veil that follows the mouse) ---------- */
-.cursor-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 560px;
-  height: 560px;
-  margin: -280px 0 0 -280px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 129, 38, 0.17), rgba(255, 129, 38, 0.07) 38%, transparent 68%);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 500ms var(--ease-standard);
-  z-index: 45;
-  will-change: transform;
-}
-.cursor-glow.is-on { opacity: 1; }
-@media (hover: none), (prefers-reduced-motion: reduce), print {
-  .cursor-glow { display: none; }
 }
 
 /* Quote on photo (Philosophie) */
